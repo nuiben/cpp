@@ -1,24 +1,27 @@
 #include <iostream>
 
+// Ask the user to input two integers, prints the sum but does not return a value
 void sum()
 {
-    std::cout << "Enter a number: \n";
     int a{};
+    int b{};
+
+    std::cout << "Enter a number: \n";
     std::cout << "Value for a: " << a << '\n';
     std::cin >> a;
 
     std::cout << "Enter another number: \n";
-    int b{};
     std::cout << "Value for b: " << b << '\n';
     std::cin >> b;
 
     std::cout << "Sum of those numbers: " << a + b << '\n';
 }
 
-void doNothing(int&)
-{
-}
 
+// This only serves to convince the lexer that we are using x in uninitializedValue
+void doNothing(int&) {}
+
+// Used to demo what an Unitialized Value defaults to in C++
 void uninitializedValue()
 {
     int x;
